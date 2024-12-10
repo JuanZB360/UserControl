@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('lastnames');
-            $table->string('gender');
+            $table->enum('gender',['masculino','femenino']);
             $table->string('address');
             $table->string('phone');
             $table->foreignId('country_id')->constrained()->onDelete('cascade');
